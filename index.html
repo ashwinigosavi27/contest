@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employeesforms</title>
+    <style>
+        div {
+            box-sizing: border-box;
+            width: 100%;
+            border: 100px solid black;
+          
+        }
+        form {
+            margin: 0 auto;
+            width: 100%;
+          
+        }
+    </style>
+</head>
+<body>
+    <h1 >New Employees</h1>
+		<form name="RegForm" onsubmit="return Employeesforms()" method="post">
+			
+        <p><strong>Name: </strong> <br> <input type="text" size="65" name="Name"  required ></p><br>
+		<p><strong>profession: </strong> <br><input type="text" size="65" name="profession">
+		</p>
+        <br>
+		<p><strong>age: </strong> <br><input type="text" size="100" name="age" ></p><br >
+        <p><input type="submit" value="ADD USER" name="Submit">
+        </p>
+        <p><scan style="font-size: 20px;">Added Employees</scan><br><br>You have 0 Employees.</p>
+         </form>
+    <script>
+			
+        function Employeesforms() {
+            var name =
+                document.forms.RegForm.Name.value;
+            var age =
+                document.forms.RegForm.age.value;
+            var profession =
+                document.forms.RegForm.profession.value; 
+            var regName = /\d+$/g;								 
+            if (name == "" || regName.test(name)) {
+                window.alert("Please enter your name properly.");
+                alert("Please enter your name properly")
+                name.focus();
+                return false;
+            }
+            if (profession == "") {
+                window.alert("Please enter your profession.");
+                profession.focus();
+                return false;
+            }
+            
+            if (age == "") {
+                window.alert("age.");
+                password.focus();
+                return false;
+            }
+     </script>
+
+   
+ </body>
+</html>
